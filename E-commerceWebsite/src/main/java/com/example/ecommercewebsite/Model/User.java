@@ -28,4 +28,7 @@ public class User {
     // Extra data
     @AssertFalse(message = "Is spun initial value must be false.")
     private boolean isSpun;
+    @NotNull(message = "Total budget can't be null.")
+    @Positive(message = "Total budget have to be a positive number.")
+    private double totalBudget;
 }
