@@ -13,7 +13,7 @@ public class Category {
     @Size(min = 4, message = "Name have to be more than 3 length long.")
     private String name;
     // Extra data
-    @NotNull(message = "Age can't be null.")
-    @Positive(message = "Age must be a positive number larger than zero.")
-    private int age;
+    @NotNull(message = "Allocation percentage can't be null.")
+    @Positive(message = "Allocation percentage must be a positive number larger than zero.")
+    private double allocationPercentage;
 }
