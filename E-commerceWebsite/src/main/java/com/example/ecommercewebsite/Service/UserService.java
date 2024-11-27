@@ -44,20 +44,13 @@ public class UserService {
         return false;
     }
 
-    // 3. Extra 5 endpoints
-    // Extra 5 endpoints: 1. Log In (Authenticate an existing user)
-    public String logIn(String username, String password) {
-        // Check if the username exists
+   // Hellper method
+    public boolean isUserExists(String userId) {
         for (User user : users) {
-            if (user.getUsername().equalsIgnoreCase(username)) {
-                // If username matches, check if the password is correct
-                if (user.getPassword().equals(password)) {
-                    return "Login successful."; // Login successful
-                } else {
-                    return "Incorrect password."; // Incorrect password
-                }
+            if (user.getId().equalsIgnoreCase(userId)) {
+                return true;
             }
         }
-        return "Username does not exist."; // Username is not found in the system
+        return false;
     }
 }
