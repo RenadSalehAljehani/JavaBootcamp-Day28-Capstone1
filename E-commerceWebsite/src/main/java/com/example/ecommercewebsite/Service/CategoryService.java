@@ -49,7 +49,7 @@ public class CategoryService {
 
     // ** New endpoint **
     // 4. Extra 5 endpoints
-    // Extra 5 endpoints: 2. Calculate budget allocations for user across all categories
+    // Extra 5 endpoints: 3. Calculate budget allocations for user across all categories
     public ArrayList<Double> calculateUserCategoriesBudgets(String userId) {
         // Create a list to store categories budgets user
         ArrayList<Double> userCategoriesBudgets = new ArrayList<>();
