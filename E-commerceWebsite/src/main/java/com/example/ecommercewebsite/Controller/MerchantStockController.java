@@ -69,6 +69,7 @@ public class MerchantStockController {
     }
 
     // 4. Extra 5 endpoints
+    // ** Front end **
     // 4.1 wheelOfFortune
     @GetMapping("/displayWheelOfFortune")
     public ResponseEntity displayWheelOfFortune() {
@@ -78,6 +79,8 @@ public class MerchantStockController {
         return ResponseEntity.status(400).body(new ApiResponse("No Products Available for the Wheel of Fortune."));
     }
 
+    // ** Front end **
+    // 4.2 Spin wheel
     @PutMapping("/spinWheel/{userId}")
     public ResponseEntity spinWheel(@PathVariable String userId) {
         if (merchantStockService.displayWheelOfFortune().isEmpty()) {
