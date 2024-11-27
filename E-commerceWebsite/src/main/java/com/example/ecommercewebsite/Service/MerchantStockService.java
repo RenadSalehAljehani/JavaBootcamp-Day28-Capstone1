@@ -161,7 +161,7 @@ public class MerchantStockService {
     }
 
     // 7. Extra 5 endpoints
-    // Extra 5 endpoints: 2 Display wheel of fortune products > for products with high stock
+    // Extra 5 endpoints: 1.1 Display wheel of fortune products > for products with high stock
     public ArrayList<String> displayWheelOfFortune() {
         // List of products to be displayed in the wheel of fortune
         ArrayList<String> wheelOfFortuneProductNames = new ArrayList<>();
@@ -184,7 +184,7 @@ public class MerchantStockService {
         return wheelOfFortuneProductNames; // Display wheel to the user
     }
 
-    // Extra 5 endpoints: 3. Allow user to spin the wheel of fortune
+    // Extra 5 endpoints: 1.2 Allow user to spin the wheel of fortune
     public Product spinWheel(String userId) {
         // Display wheel
         ArrayList<String> wheelOfFortuneProductNames = displayWheelOfFortune();
@@ -223,7 +223,7 @@ public class MerchantStockService {
         return null; // User not found or not a customer
     }
 
-    // Extra 5 endpoints: 4. sales > for products with high stock
+    // Extra 5 endpoints: 2. sales > for products with high stock
     public ArrayList<Product> sales() {
         // List of products in sales
         ArrayList<Product> productsInSales = new ArrayList<>();
