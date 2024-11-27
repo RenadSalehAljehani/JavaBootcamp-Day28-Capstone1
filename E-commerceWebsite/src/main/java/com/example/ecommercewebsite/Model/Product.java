@@ -20,4 +20,8 @@ public class Product {
     private double price;
     @NotEmpty(message = "Category id can't be null.")
     private String categoryID;
+    // Extra data
+    @NotNull(message = "Age can't be null.")
+    @Positive(message = "Age must be a positive number larger than zero.")
+    private int age;
 }
