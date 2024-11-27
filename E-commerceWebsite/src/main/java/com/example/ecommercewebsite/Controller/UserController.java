@@ -47,18 +47,11 @@ public class UserController {
     }
 
     // 2.4 Delete
-    @DeleteMapping("/deleteUser?{id}")
+    @DeleteMapping("/deleteUser/{id}")
     public ResponseEntity deleteUser(@PathVariable String id){
         if(userService.deleteUser(id)) {
             return ResponseEntity.status(200).body(new ApiResponse("User Deleted."));
         }
         return ResponseEntity.status(400).body(new ApiResponse("User Id Not Found."));
-    }
-
-    // 3. Extra 5 endpoints
-    // 3.1 LogIn
-    @GetMapping("/logIn/{username}/{password}")
-    public ResponseEntity logIn(@PathVariable String username,@PathVariable String password){
-        return ResponseEntity.status(200).body(new ApiResponse(userService.logIn(username,password)));
     }
 }
